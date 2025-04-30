@@ -29,7 +29,7 @@ def listen_to_user():
         print("\nListening...")
         recognizer.adjust_for_ambient_noise(source, duration=0.5)
         try:
-            audio = recognizer.listen(source, timeout=5, phrase_time_limit=10)
+            audio = recognizer.listen(source, timeout=10, phrase_time_limit=20)
             print("Audio captured.")
             return audio
         except sr.WaitTimeoutError:

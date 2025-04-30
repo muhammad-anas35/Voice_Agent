@@ -16,8 +16,12 @@ GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY not found in environment variables. Please check your .env file.")
 
-genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash')
+genai.configure(
+    api_key=GOOGLE_API_KEY
+)
+model = genai.GenerativeModel(
+    'gemini-2.0-flash'
+)
 
 def listen_to_user():
     """Listen to microphone input and return audio."""
@@ -49,8 +53,8 @@ def get_gemini_response(user_text):
     """Generate a response from the Gemini API."""
     try:
         prompt = (
-            f"You are a friendly Health Assistant. "
-            f"Respond briefly and informatively to: {user_text}"
+            f"You are a deep friendly Health Assistant. "
+            f"First think and then Respond short but exact , speak with deep felling and deep emotions , dont speak any symbol and special letter to: {user_text}"
         )
         response = model.generate_content(prompt)
         return response.text.strip() if response.text else "I'm not sure how to respond."

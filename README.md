@@ -7,7 +7,7 @@
 - 
 ```bash
     pip install pipwin
-    pipwin install pyaudio
+    pip install pyaudio
 ```
 - And Setup you key in .env file with name , ***GEMINI_API_KEY=""***
 

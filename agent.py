@@ -53,7 +53,7 @@ def get_gemini_response(user_text):
     """Generate a response from the Gemini API."""
     try:
         prompt = (
-            f"You are a deep friendly Health Assistant. "
+            f"You are a deep friendly Health Assistant only for health detail not for other tech or other feild. "
             f"First think and then Respond short but exact , speak with deep felling and deep emotions , dont speak any symbol and special letter to: {user_text}"
         )
         response = model.generate_content(prompt)
